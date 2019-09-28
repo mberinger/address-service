@@ -20,7 +20,7 @@
         <restlet.version>3.0-M1</restlet.version>
         <jackson.version>2.10.0.pr3</jackson.version>
 
-        <person-client.version>0.0.1-SNAPSHOT</person-client.version>
+        <person-client.version>0.0.2-SNAPSHOT</person-client.version>
     </properties>
 
     <repositories>

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import uk.co.mikebelringer.person.client.PersonServiceClient;
-import uk.co.mikebelringer.person.types.Person;
+import uk.co.mikebelringer.person.types.PersonWithDependencies;
 
 public class PersonAddressServerResource extends ServerResource {
 
@@ -18,8 +18,8 @@ public class PersonAddressServerResource extends ServerResource {
 
     @Get
     public Representation getPersonAddress() throws JsonProcessingException {
-        Person person = personServiceClient.getPerson();
-        PersonAddress PersonAddress = new PersonAddress(person, "Sunset Boulevard");
+        PersonWithDependencies personWithDependencies = personServiceClient.getPersonWithDependencies();
+        PersonAddress PersonAddress = new PersonAddress(personWithDependencies, "Sunset Boulevard");
         return new StringRepresentation(objectMapper.writeValueAsString(PersonAddress));
     }
 }

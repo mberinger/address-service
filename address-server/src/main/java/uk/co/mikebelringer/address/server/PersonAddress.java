@@ -1,21 +1,21 @@
 package uk.co.mikebelringer.address.server;
 
-import uk.co.mikebelringer.person.types.Person;
+import uk.co.mikebelringer.person.types.PersonWithDependencies;
 
 public class PersonAddress {
-    private Person person;
+    private PersonWithDependencies person;
     private String streetName;
 
-    public PersonAddress(Person person, String streetName) {
+    public PersonAddress(PersonWithDependencies person, String streetName) {
         this.person = person;
         this.streetName = streetName;
     }
 
-    public Person getPerson() {
+    public PersonWithDependencies getPerson() {
         return person;
     }
 
-    public void setPerson(Person person) {
+    public void setPerson(PersonWithDependencies person) {
         this.person = person;
     }
 
